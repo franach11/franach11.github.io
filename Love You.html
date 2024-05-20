@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://127.0.0.1:5500/tsu.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love You</title>
+    <link rel="stylesheet" href="./Love You_files/2style.css">      
+  <style>
+      body{
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #0b1522;
+
+      }
+      .heart{
+        height: 150px;
+        width: 150px;
+        background-color: red;
+        position: relative;
+        transform: rotate(45deg);
+        box-shadow: -20px 20px 150px red;
+        animation: palpitar 0.5s linear infinite alternate;
+        }
+        .contenido{
+          position:fixed;
+          margin-bottom: 5%;
+          text-align: center;
+        }
+        h1{color: white;}
+      @keyframes palpitar{
+        0%{transform: rotate(45deg) scale(1.10);}
+        80%{transform: rotate(45deg) scale(1.10);}
+        100%{transform: rotate(45deg) scale(0.8);}
+      }
+      .heart::before{
+        content: "";
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        background:red ;
+        right: 50%;
+        border-radius: 50%;
+        box-shadow: 20px 20px 150px red;
+      }
+      .heart::after{
+        content: "";
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        background:red ;
+        top: -50%;
+        border-radius: 50%;
+        box-shadow: 20px 20px 150px red;
+      }
+      
+  </style></head>
+  
+  <body>
+      <div class="heart"></div>
+      <div class="contenido"><h1><strong>TE AMO</strong></h1>
+        <a href="http://127.0.0.1:5500/I%20love%20you%20so%20much.png" target="_blank">Clickeame</a>
+      </div>
+         
+        
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+      
+</body></html>
